@@ -28,42 +28,29 @@ Millard LAC, et al. Software Application Profile: PHESANT: a tool for performing
 
 ## 1) Running a phenome scan
 
-A phenome scan is run using `WAS/phenomeScan.r`. This is ready to go. One amendment you may wish to make before running PHESANT is the TRAIT_OF_INTEREST column in the variable information file (see below).
+The phenotypes file and confounder file required to run the phenome scan are located in the 'MyWas' folder. To reproduce the error, run the phenome scan with the following command:
 
-The PHESANT phenome scan processing pipeline is illustrated in the figure [here](biobank-PHESANT-figure.pdf), and described in detail in the paper above.
-
-The phenome scan is run with the following command:
+Part 1 - Run Phenome Scan:
 
 ```bash
-cd WAS/
 Rscript phenomeScan.r \
---phenofile=<phenotypesFilePath> \
---traitofinterestfile=<traitOfInterestFilePath> \
+--phenofile="../MyWas/data/phenotypes.csv" \
+--confounderfile="../MyWas/data/confounder_file.csv" \
 --variablelistfile="../variable-info/outcome-info.tsv" \
---datacodingfile="../variable-info/data-coding-ordinal-info.csv" \
---traitofinterest=<traitOfInterestName> \
---resDir=<resultsDirectoryPath> \
---userId=<userIdFieldName>
+--datacodingfile="../variable-info/data-coding-ordinal-info.txt" \
+--traitofinterest="x25781_2_0" \
+--resDir="../MyWas/results/" \
+--userId="userId" \
+--genetic FALSE
 ```
+Part 2 - Results Processing:
 
-The following example runs part 1 of 20, of a sensitivity analysis phenome scan (adjusting for age, sex, and assessment centre, see below), using a non genetic trait of interest:
 ```bash
-cd WAS/
-Rscript phenomeScan.r \
---phenofile=<phenotypesFilePath> \
---traitofinterestfile=<traitOfInterestFilePath> \
---variablelistfile="../variable-info/outcome-info.tsv" \
---datacodingfile="../variable-info/data-coding-ordinal-info.csv" \
---traitofinterest=<traitOfInterestName> \
---resDir=<resultsDirectoryPath> \
---userId=<userIdFieldName> \
---sensitivity \
---genetic=FALSE \
---partIdx=1 \
---numParts=20
+cd ../resultsProcessing/
+Rscript mainCombineResults.r \
+--resDir="../MyWas/results/" \
+--variablelistfile="../variable-info/outcome-info.tsv"
 ```
-
-
 
 ### Required arguments
 
@@ -193,14 +180,7 @@ Bonferroni corrected 0.05 threshold).
 We do not generate a forest plot for the categorical unordered results, because we have no overall estimate (and confidence interval) for the model overall, 
 because we use a likelihood ratio test to generate a model P value. For these plots we use all results except for phenotypes marked as 'trait of interest'. 
 
-The results processing is run with the following command:
-
-```bash
-cd resultsProcessing/
-
-Rscript mainCombineResults.r \
---resDir=<resultsDirectoryPath> \
---variablelistfile="../variable-info/outcome-info.tsv"
+listfile="../variable-info/outcome-info.tsv"
 ```
 
 ### Required arguments
