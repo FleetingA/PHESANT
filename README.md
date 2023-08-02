@@ -33,6 +33,7 @@ The phenotypes file and confounder file required to run the phenome scan are loc
 Part 1 - Run Phenome Scan:
 
 ```bash
+cd ../WAS/
 Rscript phenomeScan.r \
 --phenofile="../MyWas/data/phenotypes.csv" \
 --confounderfile="../MyWas/data/confounder_file.csv" \
