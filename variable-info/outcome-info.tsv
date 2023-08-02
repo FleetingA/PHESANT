@@ -28,9 +28,9 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 84		YES				37	Assessment centre > Verbal interview > Medical conditions	100074	Cancer year/age first occurred	Integer
 87		YES-POLYMORPHIC				37	Assessment centre > Verbal interview > Medical conditions	100074	Non-cancer illness year/age first occurred	Integer
 92		YES-POLYMORPHIC				37	Assessment centre > Verbal interview > Operations	100076	Operation year/age first occurred	Integer
-93		YES					Assessment centre > Physical measures > Blood pressure	100011	"Systolic blood pressure, manual reading"	Integer
-94		YES					Assessment centre > Physical measures > Blood pressure	100011	"Diastolic blood pressure, manual reading"	Integer
-95		YES					Assessment centre > Physical measures > Blood pressure	100011	Pulse rate (during blood-pressure measurement)	Integer
+93							Assessment centre > Physical measures > Blood pressure	100011	"Systolic blood pressure, manual reading"	Integer
+94							Assessment centre > Physical measures > Blood pressure	100011	"Diastolic blood pressure, manual reading"	Integer
+95							Assessment centre > Physical measures > Blood pressure	100011	Pulse rate (during blood-pressure measurement)	Integer
 96		YES					Assessment centre > Physical measures > Blood pressure	100011	Time since interview start at which blood pressure screen(s) shown	Integer
 102							Assessment centre > Physical measures > Blood pressure	100011	"Pulse rate, automated reading"	Integer
 111		YES 				7	Assessment centre > Procedural metrics	100004	Aide-memoire completed	Categorical single
@@ -333,8 +333,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 4041		YES				100617	Assessment centre > Touchscreen > Health and medical history > Medical conditions	100044	Gestational diabetes only	Categorical single
 4056						100291	Assessment centre > Touchscreen > Health and medical history > Medical conditions	100044	Age stroke diagnosed	Integer
 4067		YES				100349	Assessment centre > Touchscreen > Health and medical history > Pain	100048	Facial pains for 3+ months	Categorical single
-4079		YES					Assessment centre > Physical measures > Blood pressure	100011	"Diastolic blood pressure, automated reading"	Integer
-4080		YES					Assessment centre > Physical measures > Blood pressure	100011	"Systolic blood pressure, automated reading"	Integer
+4079							Assessment centre > Physical measures > Blood pressure	100011	"Diastolic blood pressure, automated reading"	Integer
+4080							Assessment centre > Physical measures > Blood pressure	100011	"Systolic blood pressure, automated reading"	Integer
 4081		YES				100259	Assessment centre > Physical measures > Blood pressure	100011	Method of measuring blood pressure	Categorical single
 4092		YES				100260	Assessment centre > Physical measures > Bone-densitometry of heel	100018	Heel ultrasound method (left)	Categorical single
 4093		YES				27	Assessment centre > Physical measures > Bone-densitometry of heel	100018	Fractured heel (left)	Categorical single
@@ -888,7 +888,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 20013		YES-ACE				14	Assessment centre > Verbal interview > Medical conditions	100074	Method of recording time when non-cancer illness first diagnosed	Categorical single
 20014		YES-ACE				14	Assessment centre > Verbal interview > Operations	100076	Method of recording time when operation occurred	Categorical single
 20015		YES					Assessment centre > Physical measures > Anthropometry > Body size measures	100010	Sitting height	Continuous
-20016		YES					Assessment centre > Cognitive function > Fluid intelligence / reasoning	100027	Fluid intelligence score	Integer
+20016							Assessment centre > Cognitive function > Fluid intelligence / reasoning	100027	Fluid intelligence score	Integer
 20018		YES				18	Assessment centre > Cognitive function > Prospective memory	100031	Prospective memory result	Categorical single
 20019		YES					Assessment centre > Physical measures > Hearing test	100049	Speech-reception-threshold (SRT) estimate (left)	Continuous
 20021		YES					Assessment centre > Physical measures > Hearing test	100049	Speech-reception-threshold (SRT) estimate (right)	Continuous
@@ -957,8 +957,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 20113		YES	NO_NAN	YES		1010	Assessment centre > Touchscreen > Family history	100034	Illnesses of adopted mother	Categorical multiple
 20114		YES	NO_NAN	YES		1010	Assessment centre > Touchscreen > Family history	100034	Illnesses of adopted siblings	Categorical multiple
 20115		YES				89	Assessment centre > Verbal interview > Early life factors	100072	Country of Birth (non-UK origin)	Categorical single
-20116		YES				90	Assessment centre > Touchscreen > Lifestyle and environment > Smoking	100058	Smoking status	Categorical single
-20117		YES				90	Assessment centre > Touchscreen > Lifestyle and environment > Alcohol	100051	Alcohol drinker status	Categorical single
+20116						90	Assessment centre > Touchscreen > Lifestyle and environment > Smoking	100058	Smoking status	Categorical single
+20117						90	Assessment centre > Touchscreen > Lifestyle and environment > Alcohol	100051	Alcohol drinker status	Categorical single
 20118		YES				91	Assessment centre > Recruitment > Reception	100024	Home area population density - urban or rural	Categorical single
 20119		YES				100295	Assessment centre > Touchscreen > Sociodemographics > Employment	100064	Current employment status - corrected	Categorical single
 20121		YES					Assessment centre > Verbal interview > Employment	100073	Cascot confidence score	Integer
@@ -3450,7 +3450,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 25767		YES					Assessment centre > Imaging > Brain MRI > Task functional brain MRI	106	90th percentile of BOLD effect (in group-defined amygdala activation mask) for faces-shapes contrast	Continuous
 25768		YES					Assessment centre > Imaging > Brain MRI > Task functional brain MRI	106	90th percentile of z-statistic (in group-defined amygdala activation mask) for faces-shapes contrast	Continuous
 25780		YES				778	Assessment centre > Imaging > Brain MRI	100	Acquisition protocol phase.	Categorical single
-25781	YES	YES					Assessment centre > Imaging > Brain MRI > T2-weighted brain MRI	112	Total volume of white matter hyperintensities (from T1 and T2_FLAIR images)	Continuous
+25781	YES						Assessment centre > Imaging > Brain MRI > T2-weighted brain MRI	112	Total volume of white matter hyperintensities (from T1 and T2_FLAIR images)	Continuous
 25782		YES					Assessment centre > Imaging > Brain MRI > T1 structural brain MRI > Regional grey matter volumes (FAST)	1101	Volume of grey matter in Frontal Pole (left)	Continuous
 25783		YES					Assessment centre > Imaging > Brain MRI > T1 structural brain MRI > Regional grey matter volumes (FAST)	1101	Volume of grey matter in Frontal Pole (right)	Continuous
 25784		YES					Assessment centre > Imaging > Brain MRI > T1 structural brain MRI > Regional grey matter volumes (FAST)	1101	Volume of grey matter in Insular Cortex (left)	Continuous
